@@ -9,14 +9,14 @@ from functools import lru_cache
 
 n = 30
 mem = [float("inf") for i in range(n + 1)]
-mem[0] = 1
+mem[0] = 0
 mem[1] = 1
 
 
 # recursion
 def fib(n):
     if n == 0 or n == 1:
-        return 1
+        return n
     else:
         return fib(n - 1) + fib(n - 2)
 
@@ -25,7 +25,7 @@ def fib(n):
 @lru_cache()
 def fib_cache(n):
     if n == 1 or n == 0:
-        return 1
+        return n
     else:
         return fib_cache(n - 1) + fib_cache(n - 2)
 
@@ -43,11 +43,11 @@ def fib_mem(n):
 
 # bottom up dp
 def fib_dp(n):
-    if n < 3:
-        return 1
-    fib1 = 1
+    if n < 2:
+        return n
+    fib1 = 0
     fib2 = 1
-    res = 1
+    res = 0
     for i in range(2, n + 1):
         res = fib1 + fib2
         fib1 = fib2
@@ -88,3 +88,8 @@ if __name__ == "__main__":
     print(res)
     print("{:.8e}".format(execution_time))
     print()
+
+
+    test = [fib_dp(i) for i in range(n+1)]
+    print(test)
+

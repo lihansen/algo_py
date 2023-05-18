@@ -76,7 +76,7 @@ def coin_change_dp(coins, amount):
     for i in range(len(dp)):
         for coin in coins:
             if i - coin >= 0: # this is important , make sure the index is in range
-                dp[i] = min(dp[i], dp[i - coin] + 1)
+                dp[i] = min(dp[i], dp[i - coin] + 1)  # example dp[5] = 1 + min(dp[4], d[3], dp[0])
     print(dp)
     return dp[amount] if dp[amount] != float("inf") else -1
 
