@@ -7,7 +7,7 @@ fn = f n-1 + f n-2, for n > 1
 import time
 from functools import lru_cache
 
-n = 30
+n = 38
 mem = [float("inf") for i in range(n + 1)]
 mem[0] = 0
 mem[1] = 1
