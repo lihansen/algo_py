@@ -5,6 +5,21 @@
 # Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0
 # only the max profit is needed, not the days.
 
+
+
+# return the max profit you can achieve
+# buy in any day
+# sell in another day
+# no profit(decrease ordered sequence) -> return 0
+
+# kind of two pointers:
+# faster pointer: current day price
+# slower pinter: min price day
+
+# update the max profit every day
+
+
+
 def maxProfit(prices: list[int]) -> int:
     minprice = float("inf")
     maxprofit = 0
