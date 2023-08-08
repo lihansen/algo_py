@@ -1,6 +1,10 @@
 # https://leetcode.cn/problems/jump-game/description/
 # Problem: 55. Jump Game
 
+# Solution: Greedy
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
 
