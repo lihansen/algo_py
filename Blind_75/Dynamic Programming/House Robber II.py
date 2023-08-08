@@ -2,7 +2,7 @@
 # Problem: 213. House Robber II
 
 class Solution:
-    def rob(self, nums: List[int]) -> int:
+    def rob(self, nums: list[int]) -> int:
         n = len(nums)
 
         if n == 1:
