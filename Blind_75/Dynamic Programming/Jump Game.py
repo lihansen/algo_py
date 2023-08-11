@@ -6,7 +6,7 @@
 # Space Complexity: O(1)
 
 class Solution:
-    def canJump(self, nums: List[int]) -> bool:
+    def canJump(self, nums: list[int]) -> bool:
 
         rightmost = 0
 
