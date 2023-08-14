@@ -2,6 +2,12 @@
 # Problem: 1143. Longest Common Subsequence
 
 
+# create a 2D table for two strings
+# dp[i][j] represents the longest common subsequence of text1[:i] and text2[:j]
+# dp[0][0] = 0
+
+# similar to edit distance
+
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         m = len(text1)
