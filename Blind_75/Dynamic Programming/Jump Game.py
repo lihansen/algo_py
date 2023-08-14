@@ -4,7 +4,7 @@
 # Solution: Greedy
 # Time Complexity: O(n)
 # Space Complexity: O(1)
-
+           
 class Solution:
     def canJump(self, nums: list[int]) -> bool:
 
