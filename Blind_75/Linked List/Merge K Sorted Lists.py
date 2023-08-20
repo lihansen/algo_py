@@ -7,7 +7,7 @@
 #         self.next = next
 import heapq
 
-
+# monkey patching
 def lt(a, b):
     return a.val < b.val
 
