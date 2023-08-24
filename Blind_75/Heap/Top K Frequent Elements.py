@@ -16,6 +16,7 @@ from collections import Counter
 #         return self.freq < other.freq
 # [1,2,3,4,5] 2
 
+
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         counter = Counter(nums)
