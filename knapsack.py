@@ -19,21 +19,20 @@ maximize the value V
 
 
 def knapsack(weights, values, W):
-    nv = len(weights)
+    n = len(weights) # num of items 
     
-    dp = [[0] * (W + 1) for i in range(nv + 1)]
+    dp = [[0] * (W + 1) for i in range(n + 1)] # zero at the first line, stands for nothing choosed
 
+    
+    for i in range(n + 1):
+        for j in range(W + 1): # j weight so far
+            if weights[i - 1] <= j: # capacity still enough 
+                dp[i][j] = max(dp[i-1][j], # i th item not choosed, remaining i-1 items value
+                               dp[i-1][j - weights[i-1]] + values[i - 1]) # choose i th item 
+            else: # capacity not enough for i th item
+                dp[i][j] = dp[i-1][j] # do not choose, remains the i - 1 items value 
 
-    dp [0][0] = 0
-
-    for i in range(nv + 1):
-        for j in range(W + 1):
-            if weights[i - 1] <= j:
-                dp[i][j] = max(dp[i-1][j], dp[i-1][j - weights[i-1]] + values[i - 1])
-            else:
-                dp[i][j] = dp[i-1][j]
-
-    return dp[nv][W]
+    return dp[n][W] 
 
 
 print(knapsack([1, 3, 4, 5],[1, 4, 5, 7], 7))
