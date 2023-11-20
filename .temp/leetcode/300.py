@@ -1,4 +1,4 @@
-from leetcode import List
+from leetcode.leetcode import List
 
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:

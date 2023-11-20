@@ -1,4 +1,4 @@
-from leetcode import List
+from leetcode.leetcode import List
 
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:

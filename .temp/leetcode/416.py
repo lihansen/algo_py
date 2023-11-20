@@ -1,4 +1,4 @@
-from leetcode import List
+from leetcode.leetcode import List
 # partition equal subset sum 
 # similar to knapsack 
 

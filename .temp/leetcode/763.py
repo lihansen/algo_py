@@ -1,4 +1,4 @@
-from leetcode import *
+from leetcode.leetcode import *
 
 # greedy
 

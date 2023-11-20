@@ -1,4 +1,4 @@
-from leetcode import Node
+from leetcode.leetcode import Node
 
 from collections import deque
 class Solution:
